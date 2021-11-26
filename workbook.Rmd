@@ -1,0 +1,140 @@
+---
+title: "Aramemnon scraper"
+output: html_notebook
+---
+
+### What is this tool for?
+
+The purpose of this tool is to gather transmembrane domain information of a given Arabidopsis protein from the [ARAMEMNON database](http://aramemnon.uni-koeln.de/). This tool also works on other plant species, including:
+- Arabidopsis thaliana
+- Cucumis melo
+- Populus trichocarpa
+- Solanum lycopersicum
+- Vitis vinifera
+- Brachypodium distachyon
+- Musa acuminata
+- Oryza sativa
+- Zea mays.
+
+Below is an example of scraping \~2600 proteins that are predicted to be mitochondria-localised according to SUBAcon in suba.live.
+
+```{r}
+library(readxl)
+library(stringr)
+library(rvest)
+library(tidyr)
+```
+
+```{r}
+mito_list <- read_excel("Suba4-2021-11-8_1-11.xlsx", skip = 1) #This list comes from the export of a Suba.live search, including only AGI accessions with the highest SUBAcon score for 'mitochondria' and not other organelles/localisations
+
+mito_list_modified <- mito_list[str_detect(mito_list$Gene, "\\.1"),] #remove splice variants from search, i.e. AGI Accessions with .2, .3, .4  etc. They are either duplicated entry or lower abundant variants vs main protein
+
+gene = mito_list_modified$Gene #extract only the AGI accession information. The list will then be used for querying against ARAMEMNON
+
+head(gene)
+
+##################################################################
+#If you have only your own gene list use the follow code instead #
+#gene = unlist((read.delim('gene_list.txt', header = FALSE))     #
+#gene                                                            #
+#                                                                #
+##################################################################
+
+```
+
+Extract ARAMEMNON transmembrane domain information with the following codes and return:
+
+-   AGI accession.
+
+-   Annotation of the AGI accession according to ARAMEMNON.
+
+-   ProteinType, i.e. whether the protein is a soluble/peripheral or membrane protein.
+
+-   NumberOfDomains returns the total number of transmembrane domains based on ARAMEMNON in-built census prediction algorithm.
+
+```{r}
+AGI_accession = c()
+Annotation = c()
+ProteinType = c()
+NumberOfDomains = c()
+
+for (i in gene) {
+  AramemHTML = read_html(paste0('http://aramemnon.uni-koeln.de/seq_view.ep?search=',i))
+  Result <- AramemHTML %>% html_nodes('p')
+  ResultText <- gsub('[\t\n]', '', html_text(Result[grep("headtopbox", Result)]))
+  
+  #Scraping initial result page
+    if (grepl("protein result(s)", ResultText,  fixed = TRUE) == 1) {
+      AGI_Output <- AramemHTML %>% html_nodes('tr') %>% html_nodes('ul') %>% html_nodes('span')
+      AGI_accession[i] <- gsub("[\t\n]", "", html_text(AGI_Output[1]))
+      Annotation_Output <- AramemHTML %>%  html_nodes(".specT")
+      Annotation [i] <-  gsub("[\t\n]", "", html_text(Annotation_Output[1]))
+      DetermineProteinType <- AramemHTML %>%  html_nodes(".sideTS") %>%  html_children() %>%  html_children() %>% html_attrs()
+      if (DetermineProteinType[[2]][["src"]] == "./Gifs/T10.gif"|DetermineProteinType[[2]][["src"]] == "./Gifs/T01.gif"){
+        ProteinType[i] = 'membrane protein'
+        } else{
+          ProteinType[i] = 'soluble or peripheral protein'
+        }
+      if (ProteinType[i] == 'membrane protein'){
+        DomainSearch <- AramemHTML %>%  html_nodes(".sideTS") %>% html_element("a") %>% html_attr("href")
+        DomainSearch <- str_split(DomainSearch[1], "\" ")
+        DomainSearch <- unlist(str_extract_all(DomainSearch[[1]][1],"\\(?[0-9]+\\)?"))
+        DomainSearchNextPage <- read_html(paste0('http://aramemnon.uni-koeln.de/tm_sub.ep?GeneID=', DomainSearch[1], '&ModelID=0'))
+        
+        #need special case for b-barrel proteins in the next two lines
+        BBProtein <- DomainSearchNextPage %>% html_element('table') %>% html_nodes("div")
+        BBProtein <- gsub('[\t\n]', '', html_text(BBProtein[grep("Beta barrel TM protein predictions", BBProtein)]))
+        if (length(BBProtein) == 0) {
+        
+        DomainSearchNextPage <- DomainSearchNextPage %>% html_element('table') %>% html_nodes(xpath = '//*[@id="map0"]/area')
+        DomainSearchNextPage <- str_split(grep("TmConsens consensus prediction", DomainSearchNextPage, value = TRUE), "\" ")
+        DomainSearchNextPage <- unlist(str_extract_all(DomainSearchNextPage[[1]][5],"\\(?[0-9]+\\)?"))
+        Coordinate1 <- DomainSearchNextPage[3]
+        Coordinate2 <- DomainSearchNextPage[5]
+        DomainSearchFinalPage <- read_html(paste0('http://aramemnon.uni-koeln.de/tm_sub2.ep?GeneID=', DomainSearch[1], '&ModelID=', Coordinate1, '&MethodID=', Coordinate2))
+        DomainSearchFinalPage <- DomainSearchFinalPage %>% html_element('table') %>% html_nodes(".sideT")
+        NumberOfDomains[i] <- max(as.numeric(grep('^-?[0-9.]+$', html_text(DomainSearchFinalPage), val = T)))
+        if (NumberOfDomains[i] == '-Inf') {
+          NumberOfDomains[i] = 0
+        } else {
+            NumberOfDomains[i]
+          } #for some reason ARAMEMNON classifies certain proteins as membrane proteins without a predicted transmembrane domain. Each of these proteins have a '-INF' value because there is no membrane domain table in the last HTML link. This step converts all '-INF' values to 0. 
+      } else{NumberOfDomains[i] = 'Beta-barrel'}}
+      else{
+        NumberOfDomains[i] = '0'
+        }
+    } else {
+        AGI_accession[i] = 'please check AGI input'
+        Annotation[i] = ''
+        ProteinType[i] = ''
+        NumberOfDomains[i] = ''
+    }
+}
+```
+
+Merge all data into a dataframe, do a quick cleanup of the annotation, then export the result for later use/inspection.
+
+```{r}
+output <- data.frame(AGI_accession, Annotation, ProteinType, NumberOfDomains)
+output$Annotation <- sapply(output$Annotation, function(x) ifelse(grepl('\\s{2}', x)==TRUE, substr(x, 1, str_locate(x, "\\s{2}")[1, 'start']-1), x))
+output <- cbind(Gene = rownames(output), output)
+rownames(output) <- 1:nrow(output)
+#final mop-up of the dataset
+write.table(output, file = 'results.txt', col.names = NA, row.names = TRUE, sep = "\t")
+output
+```
+
+The 'results.txt' is the final result output. Below is an example of what you can do with the output.
+
+In the case below, the result is merged with the original SUBA table and the new data is transformed to include only useful information. Finally search for 'unknown' and 'hypothetical' proteins with NumberOfDomains \>= 1 and export the final table for downstream analysis.
+
+```{r}
+Merged_results <- merge(x = mito_list_modified, y = output, by.x = 'Gene', by.y = 'Gene')
+Merged_results <- Merged_results[, c(1,46,7,8,47,48,10,39,40)]
+unknown <- Merged_results[!(Merged_results$NumberOfDomains == '0') & ((grepl("unknown", Merged_results$Annotation, ignore.case = TRUE)|(grepl("hypothetical", Merged_results$Annotation, ignore.case = TRUE)))),]
+write.table(unknown, file = 'unknown_proteins.txt', col.names = NA, row.names = TRUE, sep = "\t")
+unknown
+```
+
+Make sure to do a sanity test on your favorite 'control' protein!

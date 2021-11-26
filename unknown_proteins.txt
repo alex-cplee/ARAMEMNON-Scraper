@@ -1,0 +1,102 @@
+""	"Gene"	"Annotation"	"Molecular Weight"	"Isoelectric Point"	"ProteinType"	"NumberOfDomains"	"Location SUBAcon"	"Location GFP"	"Location Mass Spec"
+"2"	"AT1G01240.1"	"protein of unknown function"	37513.5	9.01555	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"27"	"AT1G04280.1"	"protein of unknown function"	59980.6	6.44535	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495;plasma membrane:19334764"
+"34"	"AT1G04985.1"	"protein of unknown function"	21925.7	11.5689	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:27943495"
+"36"	"AT1G05060.1"	"protein of unknown function"	27839.3	10.025	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"39"	"AT1G05270.1"	"putative TraB-type protein of unknown function"	40744	4.63181	"membrane protein"	"3"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495;mitochondrion:21896887;plasma membrane:19334764"
+"45"	"AT1G06010.1"	"protein of unknown function"	8692.43	4.48173	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"46"	"AT1G06050.1"	"protein of unknown function"	34852.4	5.27128	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:21841088"
+"53"	"AT1G06530.1"	"putative PMD1-like protein of unknown function (AtPMD2)"	36121.3	4.46344	"membrane protein"	"1"	"mitochondrion"	NA	"golgi:25900983;golgi:25900983;golgi:25900983;mitochondrion:11743115;mitochondrion:14671022;mitochondrion:21472856;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27122571;mitochondrion:27943495;mitochondrion:21896887;plasma membrane:19334764;unclear:16618929;vacuole:17151019;vacuole:25900983"
+"60"	"AT1G06750.1"	"protein of unknown function"	59095.4	9.23407	"membrane protein"	"3"	"mitochondrion"	"mitochondrion:21515817"	NA
+"98"	"AT1G10150.1"	"putative PhloemProtein2-type protein of unknown function (AtPP2-A10)"	45520.2	7.82915	"membrane protein"	"4"	"mitochondrion"	NA	NA
+"102"	"AT1G11170.1"	"protein of unknown function"	50649.7	10.4238	"membrane protein"	"1"	"mitochondrion,golgi"	NA	NA
+"110"	"AT1G11940.1"	"putative membrane protein of unknown function"	44418.5	9.45056	"membrane protein"	"1"	"mitochondrion"	NA	"golgi:22430844"
+"139"	"AT1G14990.1"	"protein of unknown function"	13763.3	7.37491	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"140"	"AT1G15010.1"	"protein of unknown function"	16460.2	9.32633	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"149"	"AT1G16000.1"	"putative outer envelope protein of unknown function (AtOEP9)"	9290.12	10.3628	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"153"	"AT1G16830.1"	"protein of unknown function, contains pentatricopeptide (PPR) repeats"	69672.9	8.76073	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"193"	"AT1G21920.1"	"protein of unknown function, involved in flowering regulation (AtMRF1)"	46518.4	9.78665	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"202"	"AT1G22882.1"	"putative mid-SUN-type protein of unknown function (AtSUN3)"	74188.4	4.82957	"membrane protein"	"3"	"mitochondrion,plastid"	NA	"plastid:24872594"
+"219"	"AT1G24267.1"	"protein of unknown function"	36681.8	10.0657	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495;mitochondrion:21896887"
+"223"	"AT1G24570.1"	"protein of unknown function"	43993	6.50988	"membrane protein"	"1"	"mitochondrion,golgi"	NA	NA
+"235"	"AT1G26180.1"	"putative membrane protein of unknown function"	32152.9	10.0578	"membrane protein"	"7"	"mitochondrion"	NA	NA
+"242"	"AT1G27000.1"	"protein of unknown function"	33015	8.87574	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"256"	"AT1G28510.1"	"putative OPA3-type protein of unknown function"	19180.3	10.3308	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495;plasma membrane:19334764"
+"306"	"AT1G34470.1"	"putative ENOR3-like membrane protein of unknown function (AtENOR3L5)"	39799.3	7.84237	"membrane protein"	"9"	"mitochondrion"	"mitochondrion:21515817;plastid:21515817"	NA
+"406"	"AT1G53600.1"	"protein of unknown function, contains pentatricopeptide (PPR) repeat"	80503.8	8.5563	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"408"	"AT1G53760.1"	"protein of unknown function"	30608.2	10.1193	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:15276431;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27943495;unclear:16618929;vacuole:17151019"
+"416"	"AT1G55160.1"	"putative membrane protein of unknown function"	20829.3	10.4821	"membrane protein"	"1"	"mitochondrion,plastid"	NA	"golgi:25900983;golgi:25900983;mitochondrion:15276431;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:24727099;mitochondrion:27943495;unclear:16618929"
+"432"	"AT1G57540.1"	"protein of unknown function"	11269.8	9.88396	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:27943495"
+"443"	"AT1G59590.1"	"protein of unknown function"	23960.9	10.5404	"membrane protein"	"1"	"mitochondrion,plastid"	NA	NA
+"473"	"AT1G63060.1"	"putative membrane protein of unknown function"	15957.3	11.1085	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"489"	"AT1G64583.1"	"protein of unknown function, contains pentatricopeptide (PPR) repeats"	57892.9	7.5551	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"511"	"AT1G67540.1"	"protein of unknown function"	26426.7	10.2328	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"531"	"AT1G69380.1"	"protein of unknown function required for cell division, RETARDED ROOT GROWTH (AtRRG)"	42346.6	5.78053	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"547"	"AT1G71360.1"	"putative mid-SUN-type protein of unknown function (AtSUN4)"	67275.3	5.14876	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"601"	"AT1G77660.1"	"protein of unknown function, contains MORN-type repeats"	47734.1	9.56412	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"604"	"AT1G77910.1"	"protein of unknown function"	10951.9	8.32008	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"616"	"AT1G79390.1"	"protein of unknown function"	14561.6	10.2608	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"628"	"AT1G80700.1"	"putative membrane protein of unknown function"	24607.5	9.86944	"membrane protein"	"1"	"mitochondrion"	NA	"plasma membrane:19334764"
+"632"	"AT1G80980.1"	"putative membrane protein of unknown function"	24621.5	9.86944	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"662"	"AT2G04340.1"	"protein of unknown function"	20149.4	10.8323	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495"
+"669"	"AT2G04900.1"	"protein of unknown function"	13957	10.6364	"membrane protein"	"4"	"mitochondrion"	NA	NA
+"727"	"AT2G14860.1"	"putative PMP22/Mpv17-type protein of unknown function"	28277.4	10.6737	"membrane protein"	"5"	"mitochondrion"	NA	NA
+"774"	"AT2G19160.1"	"putative membrane protein of unknown function"	45753.2	8.79782	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"783"	"AT2G20390.1"	"protein of unknown function"	19821.7	7.05773	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"794"	"AT2G20820.1"	"protein of unknown function"	10052.9	10.3871	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"798"	"AT2G20940.1"	"protein of unknown function"	14143.5	10.6285	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27943495;unclear:16618929"
+"850"	"AT2G28780.1"	"putative membrane protein of unknown function"	87989.4	8.75443	"membrane protein"	"12"	"mitochondrion"	NA	NA
+"886"	"AT2G32970.1"	"putative membrane protein of unknown function"	66477.5	7.34909	"membrane protein"	"8"	"mitochondrion"	NA	NA
+"892"	"AT2G33585.1"	"protein of unknown function"	21424.4	9.88308	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:22923678;mitochondrion:27943495"
+"924"	"AT2G36500.1"	"protein of unknown function, contains PB1-type signalling protein domain"	58451.2	6.04486	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"931"	"AT2G37530.1"	"protein of unknown function"	13567.8	8.25594	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"937"	"AT2G38500.1"	"protein of unknown function"	40634.5	8.08412	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"957"	"AT2G40800.1"	"putative TIM21-like protein of unknown function (AtTim21-L1)"	41738.9	10.4366	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:14671022;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27943495;plasma membrane:19334764"
+"964"	"AT2G41945.1"	"putative membrane protein of unknown function"	17053.5	9.58935	"membrane protein"	"3"	"mitochondrion"	NA	"mitochondrion:27943495"
+"975"	"AT2G43780.1"	"protein of unknown function"	7138.58	8.97302	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:14671022;mitochondrion:22923678;mitochondrion:27122571;mitochondrion:27943495"
+"987"	"AT2G45060.1"	"protein of unknown function"	30339.2	9.94493	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:14671022;mitochondrion:21472856;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27943495;unclear:16618929"
+"990"	"AT2G45320.1"	"protein of unknown function"	43484.5	10.2027	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"995"	"AT2G45830.1"	"protein of unknown function"	61779.7	9.15929	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"1119"	"AT3G12650.1"	"protein of unknown function"	26888.4	10.3991	"membrane protein"	"3"	"mitochondrion"	NA	"mitochondrion:15276431;mitochondrion:27943495"
+"1131"	"AT3G13845.1"	"protein of unknown function"	6678.27	11.2621	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495"
+"1139"	"AT3G14430.1"	"protein of unknown function"	9045.12	9.73	"membrane protein"	"1"	"endoplasmic reticulum,mitochondrion"	NA	NA
+"1185"	"AT3G18510.1"	"protein of unknown function"	7803.46	4.70037	"membrane protein"	"1"	"endoplasmic reticulum,mitochondrion"	NA	NA
+"1197"	"AT3G19920.1"	"putative lipid droplet-associated protein of unknown function"	45267.1	8.19527	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"1250"	"AT3G24570.1"	"putative PMP22/Mpv17-type protein of unknown function"	26955.8	10.1613	"membrane protein"	"5"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495"
+"1273"	"AT3G26950.1"	"protein of unknown function"	61038.3	9.41751	"membrane protein"	"2"	"mitochondrion"	NA	"plastid:24872594"
+"1286"	"AT3G27930.1"	"putative mitochondrial outer membrane protein of unknown function (AtUBB/AtOM47)"	47199	8.06304	"membrane protein"	"Beta-barrel"	"mitochondrion"	NA	"mitochondrion:27943495;mitochondrion:21896887"
+"1361"	"AT3G50150.1"	"protein of unknown function"	59391.1	7.31981	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"1362"	"AT3G50160.1"	"protein of unknown function"	58680.9	7.89994	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1387"	"AT3G52950.1"	"protein of unknown function, contains PB1-type signalling protein domain"	60029.8	7.59638	"membrane protein"	"1"	"mitochondrion"	NA	"golgi:25900983;mitochondrion:21841088;mitochondrion:27943495;mitochondrion:21896887;plasma membrane:19334764;plasma membrane:21433285"
+"1415"	"AT3G56210.1"	"protein of unknown function"	21287.6	10.1247	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"1418"	"AT3G56430.1"	"putative TIM21-like protein of unknown function (AtTim21-L2)"	48536.9	10.2662	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:14671022;mitochondrion:21841088;mitochondrion:27943495;plasma membrane:19334764;plastid:22923678;unclear:16618929;vacuole:14760709"
+"1420"	"AT3G56590.1"	"putative membrane protein of unknown function"	52078	7.96263	"membrane protein"	"3"	"mitochondrion,plasma membrane"	NA	"mitochondrion:27943495"
+"1431"	"AT3G58150.1"	"putative OPA3-type protein of unknown function"	22258.2	10.1089	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1447"	"AT3G60480.1"	"protein of unknown function"	11734	6.51929	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:27943495"
+"1515"	"AT4G03480.1"	"putative membrane protein of unknown function"	72991.3	7.8343	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"1519"	"AT4G04180.1"	"putative AAA-type ATPase associated with unknown cellular activities"	67334.9	5.53727	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:21841088;mitochondrion:27943495;mitochondrion:21896887"
+"1601"	"AT4G16410.1"	"putative membrane protein of unknown function"	20408.3	10.0524	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"1607"	"AT4G16840.1"	"protein of unknown function"	9813.84	10.4215	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"1623"	"AT4G19080.1"	"putative membrane protein of unknown function"	37792.7	7.93441	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"1665"	"AT4G22760.1"	"protein of unknown function, contains pentatricopeptide (PPR) repeat"	64590.1	8.08796	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1681"	"AT4G25170.1"	"protein of unknown function"	37035.9	4.43825	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1711"	"AT4G28170.1"	"protein of unknown function"	15554.8	8.07084	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"1727"	"AT4G29660.1"	"membrane protein of unknown function (AtEMB2752)"	12272.7	9.84874	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"1756"	"AT4G33905.1"	"putative PMP22/Mpv17-type protein of unknown function"	28830.2	10.1366	"membrane protein"	"5"	"mitochondrion"	NA	NA
+"1824"	"AT4G40045.1"	"protein of unknown function"	15396.7	10.0635	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1860"	"AT5G04680.1"	"protein of unknown function"	78279.3	8.08872	"membrane protein"	"5"	"mitochondrion"	NA	NA
+"1881"	"AT5G07330.1"	"putative membrane protein of unknown function"	18368.9	10.3436	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"1937"	"AT5G13610.1"	"putative membrane protein of unknown function"	46203.4	6.6429	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:14671022;mitochondrion:27943495;unclear:16618929"
+"1947"	"AT5G14550.1"	"putative membrane protein of unknown function"	44554.2	10.2402	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"1972"	"AT5G16950.1"	"protein of unknown function"	11192.4	9.90639	"membrane protein"	"1"	"mitochondrion"	NA	"mitochondrion:27943495"
+"1986"	"AT5G18250.1"	"putative membrane protein of unknown function"	14128	9.44417	"membrane protein"	"2"	"mitochondrion"	NA	"mitochondrion:15276431;mitochondrion:27943495"
+"2060"	"AT5G28910.1"	"protein of unknown function"	47689.4	9.82623	"membrane protein"	"2"	"mitochondrion"	NA	NA
+"2131"	"AT5G43140.1"	"putative PMP22/Mpv17-type protein of unknown function"	28916.5	10.6784	"membrane protein"	"5"	"mitochondrion"	NA	"mitochondrion:27943495;plastid:24872594"
+"2144"	"AT5G44350.1"	"protein of unknown function"	37339.2	10.7381	"membrane protein"	"4"	"mitochondrion"	NA	"plasma membrane:21433285"
+"2151"	"AT5G45560.1"	"protein of unknown function"	81729.2	6.64575	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"2159"	"AT5G46295.1"	"protein of unknown function"	8382.95	11.3222	"membrane protein"	"1"	"mitochondrion"	NA	NA
+"2168"	"AT5G47460.1"	"protein of unknown function, contains pentatricopeptide (PPR) repeat"	64401.6	7.21134	"membrane protein"	"5"	"mitochondrion"	"mitochondrion:24037373;plastid:24037373"	NA
+"2244"	"AT5G55610.1"	"protein of unknown function"	36057.7	8.6363	"membrane protein"	"5"	"mitochondrion"	"mitochondrion:21896887;mitochondrion:21896887"	"golgi:25900983;mitochondrion:21841088;mitochondrion:22923678;mitochondrion:27943495;mitochondrion:21896887;plastid:15028209;unclear:16618929"
+"2262"	"AT5G57270.1"	"putative membrane protein of unknown function"	44973.4	9.58715	"membrane protein"	"3"	"mitochondrion"	NA	NA
+"2311"	"AT5G63050.1"	"protein of unknown function"	39298.7	9.81195	"membrane protein"	"2"	"mitochondrion"	NA	"plastid:20061580"
+"2388"	"ATMG00370.1"	"putative Ycf1-like membrane protein of unknown function"	23178.2	9.73636	"membrane protein"	"5"	"mitochondrion"	NA	"mitochondrion:21296373"
