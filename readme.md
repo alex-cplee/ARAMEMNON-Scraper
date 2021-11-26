@@ -23,7 +23,7 @@ No issue has been found so far when the code is run in RStudio version 1.4.1717 
 2. Run [ARAMEMScraper_app.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ARAMEMScraper_app.R) in R Gui or RStudio. A browser is then open that looks like this:
 <img src="/../main/Graphics/Scraper_open.png"></img>
 3. Either enter accession IDs into the text field or upload a text file containing all the gene IDs of interest.
-4. Press the submit button. Wait until the result table is created on the right (see below). Waiting time depends on the number of ID you submit for each job - the more you enter the longer you will have to wait. 
+4. Press the submit button. Wait until the result table is generated on the right (see below). Waiting time depends on the number of ID you submit for each job. Do not close the browser while you are waiting!
 <img src="/../main/Graphics/Scraper_results.png"></img>
 
 Required libraries include:
