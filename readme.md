@@ -37,11 +37,9 @@ library(tidyr)
 
 To install these libraries, use the following command:
 ```javascript
-install.packages("xxx")
+install.packages("xxx") #single library
 
-or
-
-install.packages("xxx", "yyy", "zzz") if you installing multiple packages
+install.packages("xxx", "yyy", "zzz") #if you are installing multiple packages
 ```
 where xxx (yyy and zzz) is the name of the library, such as shiny.
 
