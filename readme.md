@@ -38,11 +38,12 @@ library(tidyr)
 To install these libraries, use the following command:
 ```javascript
 install.packages("xxx")
-```
-where xxx is the name of the library, such as shiny. You will have to install these packages one by one, unfortunately.
 
-### Why did I create this app in the first place?
-**coming soon
+or
+
+install.packages("xxx", "yyy", "zzz") if you installing multiple packages
+```
+where xxx (yyy and zzz) is the name of the library, such as shiny.
 
 ### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
