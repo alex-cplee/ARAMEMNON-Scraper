@@ -7,7 +7,7 @@ ui <- fluidPage(
   sidebarLayout(position = "left",
                 sidebarPanel(
                   h4('Purpose:'),
-                  p('This is a R-based web scraping app for obtaining gene annotation and transmembrane domain information of a large number of genes from ARAMEMNON. Be aware that when you are querying >100 genes it will take some time to return a complete list of results.'),
+                  p('This is a R-based web scraping tool for obtaining gene annotation and transmembrane domain information of a large number of genes from ARAMEMNON. Be aware that when you are querying >100 genes it will take some time to return a complete list of results.'),
                   p('Copy and paste your list of genes below:'),
                   uiOutput('textfield_ui'),
                   actionButton(inputId = 'resetText', label='Clear Text'),
@@ -44,24 +44,29 @@ server <- function(input, output, session) {
               accept = c('.txt'))})
   observeEvent(input$go, {
     output$gene_list <- renderDataTable({
-      if (isTruthy(input$filedata)){
-        gene <<- list()
-        gene <<- unlist(read.delim(input$filedata$datapath, header = FALSE))
-        gene <<- unique(c(gene,str_split(str_replace_all(input$textin, ',', '\n'), "\n")[[1]]))
-        gene <<- gene[gene != ""]
-        source('ScraperScript.R')
-        return(output1)}
-      else if (input$textin == ""){
-        df = data.frame(matrix(ncol = 4, nrow = 0))
-        colnames(df) <- c('AGI_accession', 'Annotation', 'ProteinType', 'NumberOfDomains')
-        return(df)
+      #only reactive when the submit button is clicked
+      isolate(
+        if (isTruthy(input$filedata)){
+          gene <<- list()
+          gene <<- unlist(read.delim(input$filedata$datapath, header = FALSE))
+          gene <<- unique(c(gene,str_split(str_replace_all(input$textin, ',', '\n'), "\n")[[1]]))
+          gene <<- gene[gene != ""]
+          source('ScraperScript.R')
+          return(output1)
+          }
+        else if (input$textin == ""){
+          df = data.frame(matrix(ncol = 4, nrow = 0))
+          colnames(df) <- c('AGI_accession', 'Annotation', 'ProteinType', 'NumberOfDomains')
+          return(df)
+          }
+        else {
+          gene <<- list()
+          gene <<- str_split(str_replace_all(input$textin, ',', '\n'), "\n")[[1]]
+          source('ScraperScript.R')
+          return(output1)}
+        )
       }
-      else {
-        gene <<- list()
-        gene <<- str_split(str_replace_all(input$textin, ',', '\n'), "\n")[[1]]
-        source('ScraperScript.R')
-        return(output1)}
-    })
+    )
     output$Download <- downloadHandler(
       filename = function(){"results.csv"}, 
       content = function(fname){
