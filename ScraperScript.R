@@ -54,7 +54,7 @@ for (i in gene) {
   Annotation <- ifelse(grepl('\\s{2}', Annotation)==TRUE, 
                           substr(Annotation, 1, str_locate(Annotation, "\\s{2}")[1, 'start']-1), 
                           Annotation)
-  output1 <- rbind(output1, setNames(as.list(c(AGI_accession, Annotation, ProteinType, NumberOfDomains)), names(output)))
+  output1 <- rbind(output1, setNames(as.list(c(AGI_accession, Annotation, ProteinType, NumberOfDomains)), names(output1)))
 }
 
 return(output1)
