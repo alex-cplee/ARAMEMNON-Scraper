@@ -1,7 +1,7 @@
 # ARAMEMNON Scraper
 
 ### Description
-This is a R-based app for scraping gene annotation and transmembrane domain information of a large number of plant genes from [ARAMEMNON](http://aramemnon.botanik.uni-koeln.de/). To run this app in your computer, you will need to have R installed with the required libraries (see below). '[ARAMEMScraper_app.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ARAMEMScraper_app.R)' is the core of the app (run this script in R!) and '[ScraperScript.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ScraperScript.R)' contains the source of scraping function, so you will need to put both of these files in the same folder in order to run the app properly in your local environment. Be aware that when you are querying a large number of genes (>100) it will take some time to return a complete list of results. This tool works for model plant <i>Arabidopsis thaliana</i> as well as nine crop plants in the [latest version of ARAMEMNON](http://aramemnon.botanik.uni-koeln.de/proj_view.ep?id=annot) (version 8.1 in July 2024): 
+This is a R-based app for scraping gene annotation and transmembrane domain information of a large number of plant genes from [ARAMEMNON](http://aramemnon.botanik.uni-koeln.de/). To run this app in your computer, you will need to have R installed with the required libraries (see below). '[ARAMEMScraper_app.R](https://github.com/alex-cplee/ARAMEMNON-Scraper/blob/main/ARAMEMScraper_app.R)' is the core of the app (run this script in R!) and '[ScraperScript.R](https://github.com/alex-cplee/ARAMEMNON-Scraper/blob/main/ScraperScript.R)' contains the source of scraping function, so you will need to put both of these files in the same folder in order to run the app properly in your local environment. Be aware that when you are querying a large number of genes (>100) it will take some time to return a complete list of results. This tool works for model plant <i>Arabidopsis thaliana</i> as well as nine crop plants in the [latest version of ARAMEMNON](http://aramemnon.botanik.uni-koeln.de/proj_view.ep?id=annot) (version 8.1 in July 2024): 
 
 You can read more about how the source works and what the output/result can be used for in 'workbook.Rmd'. Example dataset is given in Excel file (Suba4-2021-11-8_1-11.xlsx) and example outputs are also included as txt files.
 
@@ -18,9 +18,9 @@ All credit goes to them for making the database public, so cite their paper if y
 No issue has been found so far when the code is run in RStudio version 2024.04.2+764 and R version 4.3.2 (2024-07-11).
 
 1. Download the following and put them into the same folder:
-  + [ARAMEMScraper_app.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ARAMEMScraper_app.R)
-  + [ScraperScript.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ScraperScript.R)
-2. Run [ARAMEMScraper_app.R](https://github.com/alex-cplee/data-projects/blob/main/1%20Aramemnon%20Scraper/ARAMEMScraper_app.R) in R Gui or RStudio. A browser is then open that looks like this:
+  + [ARAMEMScraper_app.R](https://github.com/alex-cplee/ARAMEMNON-Scraper/blob/main/ARAMEMScraper_app.R)
+  + [ScraperScript.R](https://github.com/alex-cplee/ARAMEMNON-Scraper/blob/main/ScraperScript.R)
+2. Run [ARAMEMScraper_app.R](https://github.com/alex-cplee/ARAMEMNON-Scraper/blob/main/ARAMEMScraper_app.R) in R Gui or RStudio. A browser is then open that looks like this:
 <img src="/../main/Graphics/Scraper_open.png"></img>
 3. Either enter accession IDs into the text field or upload a text file containing all the gene IDs of interest.
 4. Press the submit button. Wait until the result table is generated on the right (see below). Upon submitting a job, a progress bar appears at bottom right to monitor the progress of your query. Waiting time depends on the number of accession numbers you submitted for each job. Do not close the browser while you are waiting!
@@ -33,7 +33,7 @@ library(shiny)
 library(stringr)
 library(rvest)
 library(tidyr)
-library(ShinyJs)
+library(shinyjs)
 library(pbapply)
 ```
 
